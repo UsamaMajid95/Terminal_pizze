@@ -1,0 +1,18 @@
+$(document).ready(function(){
+    $("#order").on("click",function(e){
+    e.preventDefault();
+    $.ajax({
+        method:"POST",
+        url:"form.php",
+        datatype:"json",
+        data:{pizze:$('#pizze').val(),
+        size:$('#size').val(),
+        coyc:$('#coyc').val()},
+        success:function(data,status,xhr){
+            $("#check").html(data);; 
+            console.log(status); 
+            console.log(xhr); 
+        }
+    })
+})
+})
