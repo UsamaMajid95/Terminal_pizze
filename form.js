@@ -4,7 +4,6 @@ $(document).ready(function(){
     $.ajax({
         method:"POST",
         url:"form.php",
-        datatype:"json",
         data:{pizze:$('#pizze').val(),
         size:$('#size').val(),
         coyc:$('#coyc').val()},
